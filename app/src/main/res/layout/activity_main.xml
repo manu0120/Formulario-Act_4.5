@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/etNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="57dp"
+        android:layout_marginTop="38dp"
+        android:ems="10"
+
+        android:hint="Nombre"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etApellido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+
+        android:hint="Apellido"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etNombre" />
+
+    <TextView
+        android:id="@+id/tvPreferencias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Preferencias"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etApellido"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="50dp"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="192dp" />
+
+    <CheckBox
+        android:id="@+id/cbBelleza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Belleza"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPreferencias"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+         />
+
+    <CheckBox
+        android:id="@+id/cbLibros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Libros"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cbBelleza"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="5dp"
+         />
+
+    <CheckBox
+        android:id="@+id/cbFamilia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Familia"
+
+
+        app:layout_constraintTop_toBottomOf="@id/tvPreferencias"
+        app:layout_constraintStart_toEndOf="@id/cbBelleza"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="20dp"
+         />
+
+    <CheckBox
+        android:id="@+id/cbComidas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="67dp"
+
+        android:layout_marginTop="5dp"
+        android:text="Comidas y bebidas"
+        app:layout_constraintStart_toEndOf="@id/cbLibros"
+        app:layout_constraintTop_toBottomOf="@+id/cbFamilia" />
+
+    <TextView
+        android:id="@+id/tvEstadoCivil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Estado Civil:"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cbLibros"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="50dp"
+         />
+
+    <RadioGroup
+        android:id="@+id/opciones_estadoCivil"
+        android:layout_width="170dp"
+        android:layout_height="190dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvEstadoCivil"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="30dp">
+
+        <RadioButton
+            android:id="@+id/rbSoltero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dp"
+            android:text="Soltero"/>
+
+        <RadioButton
+            android:id="@+id/rbCasado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dp"
+            android:text="Casado"/>
+
+        <RadioButton
+            android:id="@+id/rbDivorviado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dp"
+            android:text="Divorciado"/>
+
+        <RadioButton
+            android:id="@+id/rbViudo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dp"
+            android:text="Viudo"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnEnviar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/opciones_estadoCivil"
+        android:layout_marginTop="20dp"
+
+        android:text="Enviar"
+        android:backgroundTint="@color/teal_200"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
