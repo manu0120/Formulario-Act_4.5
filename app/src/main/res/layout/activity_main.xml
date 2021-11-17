@@ -15,7 +15,7 @@
         android:ems="10"
 
         android:hint="Nombre"
-        android:inputType="numberDecimal"
+        android:inputType="text"
         android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="parent"
 
@@ -30,11 +30,10 @@
         android:ems="10"
 
         android:hint="Apellido"
-        android:inputType="numberDecimal"
+        android:inputType="text"
         android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etNombre" />
-
     <TextView
         android:id="@+id/tvPreferencias"
         android:layout_width="wrap_content"
@@ -53,6 +52,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Belleza"
+
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvPreferencias"
@@ -104,7 +104,7 @@
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cbLibros"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginLeft="50dp"
          />
 
@@ -116,7 +116,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvEstadoCivil"
         android:layout_marginLeft="100dp"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="18dp">
 
         <RadioButton
             android:id="@+id/rbSoltero"
@@ -133,7 +133,7 @@
             android:text="Casado"/>
 
         <RadioButton
-            android:id="@+id/rbDivorviado"
+            android:id="@+id/rbDivorciado"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="9dp"
@@ -155,11 +155,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/opciones_estadoCivil"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
 
         android:text="Enviar"
+        android:onClick="btnEnviarClicked"
         android:backgroundTint="@color/teal_200"
         />
+
+    <TextView
+        android:id="@+id/tvResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEnviar"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="20dp"/>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
